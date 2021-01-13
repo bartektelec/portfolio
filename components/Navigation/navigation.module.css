@@ -1,0 +1,5 @@
+.navigation {
+  @apply p-4 fixed h-12 w-full;
+  backdrop-filter: blur(4px);
+  transition: top 0.5s ease;
+}
