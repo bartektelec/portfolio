@@ -26,7 +26,11 @@ const Navigation: React.FC<NavigationProps> = () => {
   }, []);
 
   return (
-    <nav className={styles.navigation} style={{ top: visible ? '0' : '-60px' }}>
+    <nav
+      data-testid='nav'
+      className={styles.navigation}
+      style={{ top: visible ? '0' : '-60px' }}
+    >
       <div className='flex justify-between items-center max-w-screen-2xl mx-auto'>
         <a href='#top'>
           <Image
