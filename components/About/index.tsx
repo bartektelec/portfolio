@@ -6,7 +6,7 @@ export interface AboutProps {}
 
 const About: React.FC<AboutProps> = () => {
   return (
-    <section className='min-h-screen mb-16'>
+    <section id='about' className='mb-16'>
       <Container>
         <h2 className='font-marker text-4xl my-16'>
           <span className='accented'>About me</span>
@@ -32,19 +32,19 @@ const About: React.FC<AboutProps> = () => {
           <SkillCard
             icon='code-outline'
             title='Web development'
-            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem varius nisl at tempor, enim ullamcorper enim pharetra, mauris. '
-            tags='React, Vue.js, Next.js, JavaScript, TypeScript, GSAP'
+            text='I specialize in converting graphical interface projects to code that results as fast, responsive, and accessible website or web app. '
+            tags='React, Vue.js, Next.js, JavaScript, TypeScript, Jest, GSAP'
           />
           <SkillCard
             icon='brush-outline'
             title='UI Design'
-            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem varius nisl at tempor, enim ullamcorper enim pharetra, mauris. '
-            tags='Figma, Adobe XD, Photoshop'
+            text='I always take care that my projects are designed with care and accessibiliy in mind for the best user experience. '
+            tags='WCAG, ARIA, Figma, Adobe XD, Photoshop'
           />
           <SkillCard
             icon='smartphone-outline'
             title='Other'
-            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem varius nisl at tempor, enim ullamcorper enim pharetra, mauris. '
+            text='There are many ways to create an application, I enjoy picking up new tech and am able to do frontend and backend, as well as mobile development. '
             tags='PWA, React Native, RWD, Node.js, Express, MongoDB'
           />
         </div>

@@ -1,0 +1,4 @@
+.wrapper {
+  @apply grid;
+  height: 450px;
+}

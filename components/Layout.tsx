@@ -2,9 +2,11 @@ import React, { ReactNode } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
+import Separator from './Separator/';
 import Navigation from './Navigation';
 import Hero from './Hero';
 import About from './About';
+import Works from './Works';
 
 type Props = {
   children?: ReactNode;
@@ -21,7 +23,10 @@ const Layout: React.FC<Props> = ({ children }) => (
     <div className='app'>
       <Navigation />
       <Hero />
+      <Separator />
       <About />
+      <Separator />
+      <Works />
     </div>
   </>
 );

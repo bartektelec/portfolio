@@ -7,7 +7,7 @@ export interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = () => {
   return (
-    <header className='mt-20 w-full h-full'>
+    <header id='top' className='mt-20 w-full h-full'>
       <Container className='max-w-full relative grid grid-cols-6 sm:grid-cols-12 '>
         <div className={styles.confetti} />
         <div className={styles.confetti} />
@@ -45,7 +45,6 @@ const Hero: React.FC<HeroProps> = () => {
           </div>
         </div>
       </Container>
-      <Separator />
     </header>
   );
 };

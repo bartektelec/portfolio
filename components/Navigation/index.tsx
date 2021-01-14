@@ -18,7 +18,7 @@ const Navigation: React.FC<NavigationProps> = () => {
       prevScrollPos.current > currentScrollPos || currentScrollPos < 70
     );
     prevScrollPos.current = currentScrollPos;
-  }, 100);
+  }, 50);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -44,18 +44,18 @@ const Navigation: React.FC<NavigationProps> = () => {
         </a>
         <ul className='list-none flex gap-6 text-sm text-gray-500'>
           <li>
-            <a className='text-gray-100' href='#'>
+            <a className='text-gray-100' href='#about'>
               About
             </a>
           </li>
           <li>
-            <a href='#'>Works</a>
+            <a href='#works'>Works</a>
           </li>
           <li>
-            <a href='#'>Blog</a>
+            <a href='#posts'>Blog</a>
           </li>
           <li>
-            <a href='#'>Contact</a>
+            <a href='#contact'>Contact</a>
           </li>
         </ul>
       </div>
