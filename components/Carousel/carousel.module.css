@@ -1,4 +1,4 @@
 .wrapper {
-  @apply grid;
+  @apply grid grid-cols-6 sm:grid-cols-12 justify-items-center;
   height: 450px;
 }

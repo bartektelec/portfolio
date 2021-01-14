@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         marker: 'Permanent Marker',
       },
+      letterSpacing: {
+        ultra: '.3em',
+      },
     },
   },
   variants: {
