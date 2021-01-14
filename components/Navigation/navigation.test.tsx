@@ -9,8 +9,8 @@ describe('Navigation component', () => {
   });
   it('should disappear when scroll down', () => {
     const { getByTestId } = render(<Navigation />);
-    fireEvent.scroll(window, { y: 100 });
+    fireEvent.scroll(window, { y: 300 });
 
-    expect(getByTestId('nav')).not.toBeVisible();
+    expect(getByTestId('nav')).toHaveStyle({ top: '-60px' });
   });
 });

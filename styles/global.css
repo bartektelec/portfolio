@@ -7,3 +7,25 @@ body {
   font-weight: normal;
   height: 450vh;
 }
+
+.text {
+  max-width: 60ch;
+}
+
+.accented {
+  z-index: 0;
+  position: relative;
+}
+
+.accented::after {
+  @apply text-yellow-600;
+  display: block;
+  content: '_';
+  font-family: 'Permanent marker';
+  font-size: 72px;
+  position: absolute;
+  bottom: 0.5rem;
+  right: -0.5rem;
+  transform: rotateZ(-5deg);
+  z-index: -1;
+}

@@ -14,8 +14,9 @@ const Navigation: React.FC<NavigationProps> = () => {
   const handleScroll = debounce(() => {
     const currentScrollPos = window.pageYOffset;
 
-    console.log(currentScrollPos + ' ' + prevScrollPos.current);
-    setVisible(prevScrollPos.current > currentScrollPos);
+    setVisible(
+      prevScrollPos.current > currentScrollPos || currentScrollPos < 70
+    );
     prevScrollPos.current = currentScrollPos;
   }, 100);
 
@@ -29,9 +30,9 @@ const Navigation: React.FC<NavigationProps> = () => {
     <nav
       data-testid='nav'
       className={styles.navigation}
-      style={{ top: visible ? '0' : '-60px' }}
+      style={{ top: visible ? '0' : '-72px' }}
     >
-      <div className='flex justify-between items-center max-w-screen-2xl mx-auto'>
+      <div className='flex justify-between items-center max-w-screen-2xl py-5 mx-auto'>
         <a href='#top'>
           <Image
             src='/assets/logo.png'
