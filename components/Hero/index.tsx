@@ -1,13 +1,11 @@
-import Image from 'next/image';
 import Container from '../Container/';
-import Separator from '../Separator/';
 import styles from './hero.module.css';
 
 export interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = () => {
   return (
-    <header id='top' className='mt-20 w-full h-full'>
+    <header className='mt-20 w-full h-full'>
       <Container className='max-w-full relative grid grid-cols-6 sm:grid-cols-12 '>
         <div className={styles.confetti} />
         <div className={styles.confetti} />

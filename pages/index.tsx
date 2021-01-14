@@ -1,15 +1,5 @@
-import Link from 'next/link';
 import Layout from '../components/Layout';
 
-const IndexPage = () => (
-  <Layout>
-    <h1 className='text-red-500'>Hello Next.js 👋</h1>
-    <p>
-      <Link href='/about'>
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-);
+const IndexPage = () => <Layout />;
 
 export default IndexPage;

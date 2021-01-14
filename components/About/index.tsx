@@ -1,6 +1,5 @@
 import Container from '../Container/';
 import SkillCard from '../SkillCard/';
-import styles from './about.module.css';
 
 export interface AboutProps {}
 
