@@ -32,7 +32,7 @@ const Navigation: React.FC<NavigationProps> = () => {
       className={styles.navigation}
       style={{ top: visible ? '0' : '-72px' }}
     >
-      <div className='flex justify-between items-center max-w-screen-2xl py-5 mx-auto'>
+      <div className='flex justify-between items-center w-full max-w-screen-2xl py-5 mx-auto'>
         <a href='#top'>
           <Image
             src='/assets/logo.png'

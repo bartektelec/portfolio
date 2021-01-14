@@ -4,6 +4,7 @@ import Head from 'next/head';
 
 import Navigation from './Navigation';
 import Hero from './Hero';
+import About from './About';
 
 type Props = {
   children?: ReactNode;
@@ -20,6 +21,7 @@ const Layout: React.FC<Props> = ({ children }) => (
     <div className='app'>
       <Navigation />
       <Hero />
+      <About />
     </div>
   </>
 );

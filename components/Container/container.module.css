@@ -1,3 +1,4 @@
 .container {
-  @apply px-4 grid grid-cols-6 sm:grid-cols-12 gap-4;
+  @apply px-4 gap-4 mx-auto;
+  max-width: 1400px;
 }

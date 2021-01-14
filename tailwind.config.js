@@ -2,7 +2,14 @@ module.exports = {
   purge: ['./pages/**/*.ts', './components/**/*.ts'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      maxHeight: {
+        profile: '80vh',
+      },
+      fontFamily: {
+        marker: 'Permanent Marker',
+      },
+    },
   },
   variants: {
     extend: {},

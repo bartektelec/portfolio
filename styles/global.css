@@ -1,15 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;700&display=swap');
 
 body {
   @apply text-gray-100;
   @apply bg-gray-800;
   font-family: 'Poppins', sans-serif;
   font-weight: normal;
-  height: 450vh;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
-.text {
-  max-width: 60ch;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.hero-paragraph {
+  max-width: 40ch;
 }
 
 .accented {
@@ -24,7 +31,7 @@ body {
   font-family: 'Permanent marker';
   font-size: 72px;
   position: absolute;
-  bottom: 0.5rem;
+  bottom: 0.625rem;
   right: -0.5rem;
   transform: rotateZ(-5deg);
   z-index: -1;
