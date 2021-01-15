@@ -11,15 +11,15 @@ const About: React.FC<AboutProps> = () => {
           <span className='accented'>About me</span>
         </h2>
         <div className='mx-auto flex flex-col gap-8 text-center md:w-1/2'>
-          <h1 className='text-4xl'>
+          <h1 data-animate className='text-4xl'>
             Hello, I'm Bartlomiej, a <strong>frontend developer</strong> based
             in Oslo, Norway.
           </h1>
-          <p>
+          <p data-animate>
             I enjoy creating interactive, <strong>good-looking</strong> things
             such as websites and applications.
           </p>
-          <p>
+          <p data-animate>
             I am a current student at <strong>Noroff Vocational</strong> in
             Oslo, as well as I’m always learning new stuff in my spare time.
           </p>

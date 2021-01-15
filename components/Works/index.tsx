@@ -37,8 +37,6 @@ const Works: React.FC<WorksProps> = () => {
     [slide]
   );
 
-  useEffect(() => {}, []);
-
   return (
     <section id='works' className='mb-16'>
       <Container>
@@ -47,7 +45,11 @@ const Works: React.FC<WorksProps> = () => {
         </h2>
         <Carousel.Wrapper onNext={handleNext} onPrev={handlePrev}>
           {works.map((work, index) => (
-            <Carousel.Item {...work} showing={index === slide} />
+            <Carousel.Item
+              key={work.title}
+              {...work}
+              showing={index === slide}
+            />
           ))}
         </Carousel.Wrapper>
       </Container>

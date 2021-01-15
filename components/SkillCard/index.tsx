@@ -9,7 +9,7 @@ export interface SkillCardProps {
 
 const SkillCard: React.SFC<SkillCardProps> = ({ title, icon, tags, text }) => {
   return (
-    <div className='col-span-4'>
+    <div data-animate className='col-span-4'>
       <div className='rounded-full bg-gray-300 h-6 w-6 flex justify-center items-center'>
         <Icon
           name={icon}

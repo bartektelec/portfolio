@@ -58,7 +58,10 @@ const Item: React.FC<ItemProps> = ({
   showing,
 }) => {
   return (
-    <div className={cn('grid grid-cols-8 relative', { 'md:hidden': !showing })}>
+    <div
+      data-animate
+      className={cn('grid grid-cols-8 relative', { 'md:hidden': !showing })}
+    >
       <div
         style={{ backgroundImage: `url(${imageURL})` }}
         className='h-72 w-full bg-gray-500 bg-top bg-cover col-span-8 transform translate-y-8'
@@ -69,13 +72,13 @@ const Item: React.FC<ItemProps> = ({
           <h4 className='font-bold text-2xl inline'>{title}</h4>
           <div className='flex gap-4 ml-8'>
             {ghURL ? (
-              <a href={ghURL}>
+              <a className='opacity-75 hover:opacity-100' href={ghURL}>
                 <Icon width='24' height='24' name='github-outline' />
                 <span className='sr-only'>Github Repository</span>
               </a>
             ) : null}
             {liveURL ? (
-              <a href={liveURL}>
+              <a className='opacity-75 hover:opacity-100' href={liveURL}>
                 <Icon width='24' height='24' name='external-link-outline' />
                 <span className='sr-only'>Live demo</span>
               </a>

@@ -7,7 +7,10 @@ export interface BlogPostProps {
 
 const BlogPost: React.FC<BlogPostProps> = ({ title, short, url }) => {
   return (
-    <div className='flex items-baseline opacity-75 hover:opacity-100'>
+    <div
+      data-animate
+      className='flex items-baseline opacity-75 hover:opacity-100'
+    >
       <div className='px-2'>
         <Icon name='chevron-right-outline' data-eva-fill='white' />
       </div>
