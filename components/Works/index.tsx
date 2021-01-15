@@ -15,6 +15,14 @@ const works = [
     liveURL: 'https://bartektelec.github.io/shuuz-client/',
   },
   {
+    title: 'Bartek Telec',
+    text: 'This is the website you are seeing now.',
+    tags: 'Next.js, TypeScript, TailwindCSS, GSAP',
+    eyebrow: 'Personal portfolio',
+    imageURL: './assets/portfolio.png',
+    ghURL: 'https://github.com/bartektelec/portfolio',
+  },
+  {
     title: 'Foodie',
     text: 'Food ordering / restaurant searching app.',
     tags: 'Vanilla JS ES6, Bootstrap, Strapi',
@@ -22,6 +30,24 @@ const works = [
     imageURL: './assets/foodie.png',
     ghURL: 'https://github.com/bartektelec/foodie-app',
     liveURL: 'https://bartektelec.github.io/foodie-app/',
+  },
+  {
+    title: 'Lameflix',
+    text: 'Movie and series search, inspired to be a netflix clone.',
+    tags: 'React, styled-components, Storybook',
+    eyebrow: 'tv series search',
+    imageURL: './assets/lameflix.png',
+    ghURL: 'https://github.com/bartektelec/react-netflix-clone',
+    liveURL: 'https://bartektelec.github.io/react-netflix-clone/',
+  },
+  {
+    title: 'FramX',
+    text: 'Rebranding suggestion to a local software company.',
+    tags: 'HTML5, SCSS, RWD, IE8+ Compatible',
+    eyebrow: 'local company',
+    imageURL: './assets/framx.png',
+    ghURL: 'https://github.com/bartektelec/fram-x-website',
+    liveURL: 'https://bartektelec.github.io/fram-x-website/',
   },
 ];
 

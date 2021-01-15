@@ -66,15 +66,15 @@ const Item: React.FC<ItemProps> = ({
     <div
       className={cn(
         style.transition,
-        'grid grid-cols-8 col-start-1 row-start-1 relative',
+        'grid grid-cols-8 col-start-1 row-start-1 relative transform',
         {
-          'sm:opacity-0 pointer-events-none': !showing,
+          'sm:opacity-0 sm:scale-90 pointer-events-none': !showing,
         }
       )}
     >
       <div
         style={{ backgroundImage: `url(${imageURL})` }}
-        className='h-72 w-full bg-gray-500 bg-top bg-cover col-span-8 transform translate-y-8'
+        className='shadow-lg h-72 w-full bg-gray-500 bg-top bg-cover col-span-8 transform translate-y-8'
       ></div>
       <div className='shadow-md bg-gray-100 text-gray-800 p-8 col-span-8 md:col-span-6 md:col-start-2 transform -translate-y-8'>
         <p className='tracking-ultra text-xs uppercase'>{eyebrow}</p>
