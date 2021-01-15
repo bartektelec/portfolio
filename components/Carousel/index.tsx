@@ -1,12 +1,16 @@
 import Icon from '../Icon';
 import style from './carousel.module.css';
+import cn from 'classnames';
 
-export interface CarouselProps {}
+export interface CarouselProps {
+  onPrev: () => void;
+  onNext: () => void;
+}
 
-const Wrapper: React.FC<CarouselProps> = ({ children }) => {
+const Wrapper: React.FC<CarouselProps> = ({ children, onPrev, onNext }) => {
   return (
     <div className={style.wrapper}>
-      <button className='focus:outline-none hidden sm:block'>
+      <button onClick={onPrev} className='focus:outline-none hidden sm:block'>
         <Icon
           name='arrow-ios-back-outline'
           data-eva-width='32'
@@ -16,7 +20,10 @@ const Wrapper: React.FC<CarouselProps> = ({ children }) => {
         <span className='sr-only'>Previous project</span>
       </button>
       <div className='col-span-6 sm:col-span-8 sm:col-start-3'>{children}</div>
-      <button className='focus:outline-none sm:col-start-12 hidden sm:block'>
+      <button
+        onClick={onNext}
+        className='focus:outline-none sm:col-start-12 hidden sm:block'
+      >
         <Icon
           name='arrow-ios-forward-outline'
           data-eva-width='32'
@@ -35,6 +42,7 @@ export interface ItemProps {
   eyebrow: string;
   tags: string;
   imageURL: string;
+  showing: boolean;
   ghURL?: string;
   liveURL?: string;
 }
@@ -47,9 +55,10 @@ const Item: React.FC<ItemProps> = ({
   imageURL,
   ghURL,
   liveURL,
+  showing,
 }) => {
   return (
-    <div className='grid grid-cols-8 relative'>
+    <div className={cn('grid grid-cols-8 relative', { 'md:hidden': !showing })}>
       <div
         style={{ backgroundImage: `url(${imageURL})` }}
         className='h-72 w-full bg-gray-500 bg-top bg-cover col-span-8 transform translate-y-8'
