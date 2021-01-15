@@ -26,9 +26,8 @@ const Contact: React.FC<ContactProps> = () => {
           <p data-animate>
             or visit my <strong>profiles</strong> on social media
           </p>
-          <div className='flex flex-col my-8 gap-4'>
+          <div data-animate className='flex flex-col my-8 gap-4'>
             <a
-              data-animate
               className='flex gap-2 opacity-70 hover:opacity-100'
               href='https://github.com/bartektelec'
             >
@@ -36,7 +35,6 @@ const Contact: React.FC<ContactProps> = () => {
               https://github.com/bartektelec
             </a>
             <a
-              data-animate
               className='flex gap-2 opacity-70 hover:opacity-100'
               href='https://www.linkedin.com/in/bart-telec'
             >

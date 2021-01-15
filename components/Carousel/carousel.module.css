@@ -1,3 +1,14 @@
 .wrapper {
   @apply grid grid-cols-6 sm:grid-cols-12 justify-items-center;
 }
+
+.transition {
+  animation: fade 0.4s ease;
+  transition: opacity 0.4s ease-in-out;
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}

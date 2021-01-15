@@ -19,7 +19,12 @@ const Wrapper: React.FC<CarouselProps> = ({ children, onPrev, onNext }) => {
         />
         <span className='sr-only'>Previous project</span>
       </button>
-      <div className='col-span-6 sm:col-span-8 sm:col-start-3'>{children}</div>
+      <div
+        data-animate
+        className='col-span-6 sm:col-span-8 sm:col-start-3 sm:grid grid-cols-1 grid-rows-1'
+      >
+        {children}
+      </div>
       <button
         onClick={onNext}
         className='focus:outline-none sm:col-start-12 hidden sm:block'
@@ -59,8 +64,13 @@ const Item: React.FC<ItemProps> = ({
 }) => {
   return (
     <div
-      data-animate
-      className={cn('grid grid-cols-8 relative', { 'md:hidden': !showing })}
+      className={cn(
+        style.transition,
+        'grid grid-cols-8 col-start-1 row-start-1 relative',
+        {
+          'sm:opacity-0 pointer-events-none': !showing,
+        }
+      )}
     >
       <div
         style={{ backgroundImage: `url(${imageURL})` }}
@@ -73,14 +83,18 @@ const Item: React.FC<ItemProps> = ({
           <div className='flex gap-4 ml-8'>
             {ghURL ? (
               <a className='opacity-75 hover:opacity-100' href={ghURL}>
-                <Icon width='24' height='24' name='github-outline' />
-                <span className='sr-only'>Github Repository</span>
+                <span>
+                  <Icon width='24' height='24' name='github-outline' />
+                  <span className='sr-only'>Github Repository</span>
+                </span>
               </a>
             ) : null}
             {liveURL ? (
               <a className='opacity-75 hover:opacity-100' href={liveURL}>
-                <Icon width='24' height='24' name='external-link-outline' />
-                <span className='sr-only'>Live demo</span>
+                <span>
+                  <Icon width='24' height='24' name='external-link-outline' />
+                  <span className='sr-only'>Live demo</span>
+                </span>
               </a>
             ) : null}
           </div>
