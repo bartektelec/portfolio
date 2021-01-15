@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import Container from '../Container/';
 import Carousel from '../Carousel/';
 
