@@ -7,15 +7,15 @@ const Hero: React.FC<HeroProps> = () => {
   return (
     <header className='mt-20 w-full h-full'>
       <Container className='max-w-full relative grid grid-cols-6 sm:grid-cols-12 '>
-        <div className={styles.confetti} />
-        <div className={styles.confetti} />
-        <div className={styles.confetti} />
-        <div className={styles.confetti} />
-        <div className={styles.confetti} />
-        <div className={styles.confetti} />
-        <div className={styles.confetti} />
-        <div className={styles.confetti} />
-        <div className={styles.confetti} />
+        <div data-confetti className={styles.confetti} />
+        <div data-confetti className={styles.confetti} />
+        <div data-confetti className={styles.confetti} />
+        <div data-confetti className={styles.confetti} />
+        <div data-confetti className={styles.confetti} />
+        <div data-confetti className={styles.confetti} />
+        <div data-confetti className={styles.confetti} />
+        <div data-confetti className={styles.confetti} />
+        <div data-confetti className={styles.confetti} />
         <div className='sm:order-2 col-span-6'>
           <img
             src='/assets/profile.png'

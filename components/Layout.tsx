@@ -26,8 +26,15 @@ const Layout: React.FC<Props> = () => {
   useEffect(() => {
     if (scene.current) {
       const header = scene.current.querySelector('header')!;
+      const confetti = header.querySelectorAll('[data-confetti]');
       const headerEls = header.querySelectorAll('a,p,h2');
       const image = header.querySelector('img');
+
+      gsap.fromTo(
+        confetti,
+        { opacity: 0 },
+        { opacity: 1, ease: 'easeInOut', duration: 0.3, stagger: 0.1 }
+      );
 
       gsap.fromTo(
         image,
