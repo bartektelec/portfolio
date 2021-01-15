@@ -20,7 +20,7 @@ const Works: React.FC<WorksProps> = () => {
             ghURL='https://github.com/bartektelec/shuuz-client'
             liveURL='https://bartektelec.github.io/shuuz-client/'
           />
-          <Carousel.Item
+          {/* <Carousel.Item
             title='Foodie'
             text='Food ordering / restaurant searching app.'
             tags='Vanilla JS ES6, Bootstrap, Strapi'
@@ -28,7 +28,7 @@ const Works: React.FC<WorksProps> = () => {
             imageURL='./assets/foodie.png'
             ghURL='https://github.com/bartektelec/foodie-app'
             liveURL='https://bartektelec.github.io/foodie-app/'
-          />
+          /> */}
         </Carousel.Wrapper>
       </Container>
     </section>

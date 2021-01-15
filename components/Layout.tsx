@@ -6,6 +6,8 @@ import Navigation from './Navigation';
 import Hero from './Hero';
 import About from './About';
 import Works from './Works';
+import Blog from './Blog';
+import Contact from './Contact';
 
 type Props = {
   children?: ReactNode;
@@ -26,6 +28,10 @@ const Layout: React.FC<Props> = () => (
       <About />
       <Separator />
       <Works />
+      <Separator />
+      <Blog />
+      <Separator />
+      <Contact />
     </div>
   </>
 );

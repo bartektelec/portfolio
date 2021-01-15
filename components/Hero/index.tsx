@@ -34,12 +34,15 @@ const Hero: React.FC<HeroProps> = () => {
             code to align boxes on the screen and make them interactive.
           </p>
           <div className='flex flex-wrap justify-between w-full sm:justify-start gap-4'>
-            <button className='border-gray-100 bg-gray-800 border py-3 px-4 rounded'>
+            <a
+              href='#works'
+              className='border-gray-100 bg-gray-800 border py-3 px-4 rounded'
+            >
               See my works
-            </button>
-            <button className='bg-yellow-600 py-3 px-4 rounded'>
+            </a>
+            <a href='#contact' className='bg-yellow-600 py-3 px-4 rounded'>
               Contact me
-            </button>
+            </a>
           </div>
         </div>
       </Container>

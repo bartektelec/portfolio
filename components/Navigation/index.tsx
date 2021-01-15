@@ -33,7 +33,7 @@ const Navigation: React.FC<NavigationProps> = () => {
       style={{ top: visible ? '0' : '-72px' }}
     >
       <div className='flex justify-between items-center w-full max-w-screen-2xl py-5 mx-auto'>
-        <a href='#top'>
+        <a href='#'>
           <Image
             src='/assets/logo.png'
             alt='Bartek Telec logo'
