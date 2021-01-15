@@ -30,14 +30,14 @@ const Contact: React.FC<ContactProps> = () => {
               className='flex gap-2 opacity-70 hover:opacity-100'
               href='https://github.com/bartektelec'
             >
-              <Icon name='github-outline' fill='#ffffff' />
+              <Icon name='github-outline' data-eva-fill='#ffffff' />
               https://github.com/bartektelec
             </a>
             <a
               className='flex gap-2 opacity-70 hover:opacity-100'
               href='https://www.linkedin.com/in/bart-telec'
             >
-              <Icon name='linkedin-outline' fill='#ffffff' />
+              <Icon name='linkedin-outline' data-eva-fill='#ffffff' />
               https://www.linkedin.com/in/bart-telec
             </a>
           </div>
