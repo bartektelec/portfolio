@@ -8,6 +8,7 @@ import About from './About';
 import Works from './Works';
 import Blog from './Blog';
 import Contact from './Contact';
+import Footer from './Footer';
 
 type Props = {
   children?: ReactNode;
@@ -32,6 +33,7 @@ const Layout: React.FC<Props> = () => (
       <Blog />
       <Separator />
       <Contact />
+      <Footer />
     </div>
   </>
 );
