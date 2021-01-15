@@ -9,6 +9,7 @@ export interface NavigationProps {}
 
 const Navigation: React.FC<NavigationProps> = () => {
   const prevScrollPos = useRef(0);
+  const navList = useRef(null);
   const [visible, setVisible] = useState(true);
 
   const handleScroll = debounce(() => {
@@ -33,7 +34,7 @@ const Navigation: React.FC<NavigationProps> = () => {
       style={{ top: visible ? '0' : '-72px' }}
     >
       <div className='flex justify-between items-center w-full max-w-screen-2xl py-5 mx-auto'>
-        <a href='#'>
+        <a className='hover:opacity-75 transition-opacity' href='#'>
           <Image
             src='/assets/logo.png'
             alt='Bartek Telec logo'
@@ -42,20 +43,41 @@ const Navigation: React.FC<NavigationProps> = () => {
           />
           <span className='sr-only'>Bartek Telec logo</span>
         </a>
-        <ul className='list-none flex gap-6 text-sm text-gray-500'>
+        <ul
+          ref={navList}
+          className='list-none flex gap-6 text-sm text-gray-100'
+        >
           <li>
-            <a className='text-gray-100' href='#about'>
+            <a
+              className='opacity-75 hover:opacity-100 transition-opacity'
+              href='#about'
+            >
               About
             </a>
           </li>
           <li>
-            <a href='#works'>Works</a>
+            <a
+              className='opacity-75 hover:opacity-100 transition-opacity'
+              href='#works'
+            >
+              Works
+            </a>
           </li>
           <li>
-            <a href='#posts'>Blog</a>
+            <a
+              className='opacity-75 hover:opacity-100 transition-opacity'
+              href='#posts'
+            >
+              Blog
+            </a>
           </li>
           <li>
-            <a href='#contact'>Contact</a>
+            <a
+              className='opacity-75 hover:opacity-100 transition-opacity'
+              href='#contact'
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </div>

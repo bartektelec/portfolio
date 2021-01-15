@@ -36,11 +36,14 @@ const Hero: React.FC<HeroProps> = () => {
           <div className='flex flex-wrap justify-between w-full sm:justify-start gap-4'>
             <a
               href='#works'
-              className='border-gray-100 bg-gray-800 border py-3 px-4 rounded'
+              className='border-gray-100 bg-gray-800 hover:bg-gray-600 transition-colors border py-3 px-4 rounded'
             >
               See my works
             </a>
-            <a href='#contact' className='bg-yellow-600 py-3 px-4 rounded'>
+            <a
+              href='#contact'
+              className='bg-yellow-600 hover:bg-yellow-500 transition-colors py-3 px-4 rounded'
+            >
               Contact me
             </a>
           </div>
