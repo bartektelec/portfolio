@@ -29,7 +29,7 @@ const Blog: React.FC<BlogProps> = () => {
           />
         </div>
         <a
-          className='flex gap-4 mt-8 opacity-75 hover:opacity-100'
+          className='flex gap-4 mt-16 opacity-75 hover:opacity-100'
           href='https://next-blog-sable.vercel.app/'
         >
           See all my posts

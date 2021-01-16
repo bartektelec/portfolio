@@ -24,10 +24,7 @@ const About: React.FC<AboutProps> = () => {
             Oslo, as well as I’m always learning new stuff in my spare time.
           </p>
         </div>
-        <h3 className='text-3xl font-bold text-gray-400 text-center my-12'>
-          Skills
-        </h3>
-        <div className='grid grid-cols-4 gap-12 sm:grid-cols-12'>
+        <div className='grid grid-cols-4 gap-12 sm:grid-cols-12 mt-16'>
           <SkillCard
             icon='code-outline'
             title='Web development'

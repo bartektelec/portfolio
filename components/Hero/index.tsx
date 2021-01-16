@@ -14,10 +14,10 @@ const Hero: React.FC<HeroProps> = () => {
             className={styles.confetti}
           />
         ))}
-        <div className='sm:order-2 col-span-6'>
+        <div className='sm:order-2 col-span-6 pt-16'>
           <img
             src='/assets/profile.png'
-            className='max-h-profile'
+            className='max-h-profile hero-img'
             alt="Bartek's profile picture"
           />
         </div>

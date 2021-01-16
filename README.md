@@ -5,7 +5,7 @@
 - [x] Style posts section
 - [x] Style contect section
 - [x] Apply hover styles
-- [ ] Add indicator to carousel
+- [x] Add indicator to carousel
 - [ ] Style active link in navbar
 - [ ] Contact form?
 - [ ] Test Navigation component

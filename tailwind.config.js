@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       maxHeight: {
-        profile: '80vh',
+        profile: 'min(600px, 70vh)',
       },
       fontFamily: {
         marker: 'Permanent Marker',
