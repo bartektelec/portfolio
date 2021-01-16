@@ -1,9 +1,17 @@
+import { useRef, useEffect } from 'react';
 import Container from '../Container';
 import Icon from '../Icon';
 
 export interface ContactProps {}
 
 const Contact: React.FC<ContactProps> = () => {
+  const email = useRef<HTMLAnchorElement>(null);
+  useEffect(() => {
+    if (email.current) {
+      email.current.setAttribute('href', 'mailto:hello@btelec.no');
+      email.current.textContent = 'hello@btelec.no';
+    }
+  }, []);
   return (
     <section id='contact'>
       <Container>
@@ -18,6 +26,7 @@ const Contact: React.FC<ContactProps> = () => {
           </p>
           <a
             data-animate
+            ref={email}
             className='font-marker text-3xl sm:text-5xl md:text-6xl py-12'
             href='#'
           >
