@@ -78,6 +78,9 @@ const Works: React.FC<WorksProps> = () => {
             />
           ))}
         </Carousel.Wrapper>
+        <p className='hidden sm:flex text-xs justify-center items-center'>
+          {slide + 1}/{works.length}
+        </p>
       </Container>
     </section>
   );
