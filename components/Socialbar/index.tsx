@@ -4,7 +4,7 @@ export interface SocialProps {}
 
 const Social: React.FC<SocialProps> = () => {
   return (
-    <aside className='hidden fixed left-8 bottom-0 sm:flex flex-col items-center gap-4'>
+    <aside className='hidden fixed left-8 bottom-0 2xl:flex flex-col items-center gap-4'>
       <div className='w-px bg-gray-500 h-48'></div>
       <a
         className='opacity-70 hover:opacity-100'
