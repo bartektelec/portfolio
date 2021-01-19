@@ -94,6 +94,23 @@ const Layout: React.FC<Props> = () => {
     <>
       <Head>
         <title>Bartek Telec - portfolio</title>
+        <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-HX4G9E1V2Q'
+        ></script>
+        <script
+          async
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){
+            dataLayer.push(arguments);
+          };
+          gtag('js', new Date());
+
+          gtag('config', 'G-HX4G9E1V2Q');`,
+          }}
+        />
         <meta charSet='utf-8' />
         <meta
           prefix='og: http://ogp.me/ns#'
