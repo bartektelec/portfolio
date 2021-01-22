@@ -33,18 +33,16 @@ const Layout: React.FC<Props> = () => {
       gsap.fromTo(
         confetti,
         { opacity: 0 },
-        { opacity: 1, ease: 'easeInOut', duration: 0.3, stagger: 0.1 }
+        { opacity: 1, ease: 'easeInOut', duration: 0.5, stagger: 0.2 }
       );
 
       gsap.fromTo(
         image,
-        { y: '+=50', opacity: 0 },
+        { opacity: 0 },
         {
-          y: 0,
           opacity: 1,
-          delay: 1.5,
           ease: 'easeInOut',
-          duration: 1,
+          duration: 1.5,
         }
       );
 
@@ -54,7 +52,6 @@ const Layout: React.FC<Props> = () => {
         {
           y: 0,
           opacity: 1,
-          delay: 0.8,
           ease: 'easeInOut',
           stagger: 0.2,
           duration: 0.8,
