@@ -6,6 +6,7 @@
 - [x] Style contect section
 - [x] Apply hover styles
 - [x] Add indicator to carousel
+- [ ] Add blog subpage
 - [ ] Style active link in navbar
 - [ ] Contact form?
 - [ ] Test Navigation component

@@ -29,6 +29,24 @@ body {
   position: relative;
 }
 
+.link--active {
+  @apply relative;
+  opacity: 1;
+}
+
+.link--active::after {
+  @apply absolute -bottom-2 w-1 h-1 bg-yellow-600 block rounded-sm opacity-0;
+  left: 50%;
+  content: '';
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 .accented::after {
   @apply text-yellow-600;
   display: block;
