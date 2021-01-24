@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Container from '../Container/';
 import styles from './hero.module.css';
 
@@ -14,8 +15,10 @@ const Hero: React.FC<HeroProps> = () => {
             className={styles.confetti}
           />
         ))}
-        <div className='sm:order-2 col-span-6 md:pt-16'>
-          <img
+        <div className='sm:order-2 col-span-6 md:pt-16 mx-auto'>
+          <Image
+            width='472'
+            height='640'
             src='/assets/profile.png'
             className='max-h-profile min-h-profile hero-img mx-auto'
             alt="Bartek's profile picture"
