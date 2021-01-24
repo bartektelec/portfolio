@@ -5,3 +5,14 @@
 .transition {
   transition: opacity 0.3s 0.3s ease-in-out, transform 0.6s ease-out;
 }
+
+.imageScroll {
+  animation: scrollDown 5s ease-in-out alternate infinite;
+  filter: brightness(0.8);
+}
+
+@keyframes scrollDown {
+  to {
+    object-position: bottom;
+  }
+}

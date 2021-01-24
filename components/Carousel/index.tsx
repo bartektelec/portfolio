@@ -1,4 +1,5 @@
 import Icon from '../Icon';
+import Image from 'next/image';
 import style from './carousel.module.css';
 import cn from 'classnames';
 
@@ -72,10 +73,16 @@ const Item: React.FC<ItemProps> = ({
         }
       )}
     >
-      <div
-        style={{ backgroundImage: `url(${imageURL})` }}
-        className='shadow-lg h-72 w-full bg-gray-500 bg-top bg-cover col-span-8 transform translate-y-8'
-      ></div>
+      <div className='shadow-lg h-72 w-full bg-gray-500 bg-top bg-cover col-span-8 transform translate-y-8'>
+        <Image
+          layout='fill'
+          objectFit='cover'
+          objectPosition='top'
+          src={imageURL}
+          className={style.imageScroll}
+          alt={title}
+        />
+      </div>
       <div className='shadow-md bg-gray-100 text-gray-800 p-8 col-span-8 md:col-span-6 md:col-start-2 transform -translate-y-8'>
         <p className='tracking-ultra text-xs uppercase'>{eyebrow}</p>
         <div className='flex justify-between items-center'>
