@@ -7,8 +7,8 @@
 }
 
 .imageScroll {
-  animation: scrollDown 5s ease-in-out alternate infinite;
   filter: brightness(0.8);
+  /* animation: scrollDown 5s ease-in-out alternate infinite; */
 }
 
 @keyframes scrollDown {
