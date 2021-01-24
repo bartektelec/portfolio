@@ -10,7 +10,6 @@ export interface NavigationProps {}
 const Navigation: React.FC<NavigationProps> = () => {
   const prevScrollPos = useRef(0);
   const navList = useRef<HTMLUListElement>(null);
-  const active = useRef('about');
   const [visible, setVisible] = useState(true);
 
   const handleScroll = debounce(() => {
