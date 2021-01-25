@@ -86,7 +86,7 @@ const Item: React.FC<ItemProps> = ({
       <div className='shadow-md bg-gray-100 text-gray-800 p-8 col-span-8 md:col-span-6 md:col-start-2 transform -translate-y-8'>
         <p className='tracking-ultra text-xs uppercase'>{eyebrow}</p>
         <div className='flex justify-between items-center'>
-          <h4 className='font-bold text-2xl inline'>{title}</h4>
+          <h3 className='font-bold text-2xl inline'>{title}</h3>
           <div className='flex gap-4 ml-8'>
             {ghURL ? (
               <a className='opacity-75 hover:opacity-100' href={ghURL}>

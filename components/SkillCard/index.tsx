@@ -18,7 +18,7 @@ const SkillCard: React.SFC<SkillCardProps> = ({ title, icon, tags, text }) => {
           data-eva-height='16'
         />
       </div>
-      <h4 className='font-bold my-4'>{title}</h4>
+      <h3 className='font-bold my-4'>{title}</h3>
       <p className='text-sm'>{text}</p>
       <p className='mt-4 font-bold text-xs text-gray-300'>{tags}</p>
     </div>
