@@ -92,7 +92,12 @@ const Layout: React.FC<Props> = () => {
   return (
     <>
       <Head>
+        <html lang='en' />
         <title>Bartek Telec - portfolio</title>
+        <meta
+          property='description'
+          content='Bartek Telec personal portfolio. I’m a frontend developer based in Oslo, that means I write code to align boxes on the screen and make them interactive.'
+        />
         <script
           async
           src='https://www.googletagmanager.com/gtag/js?id=G-HX4G9E1V2Q'
