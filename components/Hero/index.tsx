@@ -17,6 +17,7 @@ const Hero: React.FC<HeroProps> = () => {
         ))}
         <div className='sm:order-2 col-span-6 md:pt-16 mx-auto'>
           <Image
+            data-profile
             width='472'
             height='640'
             src='/assets/profile.png'
