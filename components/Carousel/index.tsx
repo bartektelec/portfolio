@@ -69,7 +69,7 @@ const Item: React.FC<ItemProps> = ({
         style.transition,
         'grid grid-cols-8 col-start-1 row-start-1 relative transform',
         {
-          'sm:opacity-0 sm:scale-90 pointer-events-none': !showing,
+          'sm:opacity-0 sm:scale-90 sm:pointer-events-none': !showing,
         }
       )}
     >
