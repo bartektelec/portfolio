@@ -36,7 +36,7 @@ const MyApp: React.FC<MyAppProps> = ({ Component, pageProps }) => {
         <meta
           prefix='og: http://ogp.me/ns#'
           property='og:image'
-          content='https://btelec.no/assets/portfolio.png'
+          content='https://btelec.no/assets/portfolio.jpg'
         />
         <link
           rel='apple-touch-icon'
