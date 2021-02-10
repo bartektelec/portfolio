@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = () => {
             data-profile
             width='472'
             height='640'
-            src='/assets/profile.png'
+            src='/assets/profile_1.png'
             className='max-h-profile min-h-profile hero-img mx-auto'
             alt="Bartek's profile picture"
           />

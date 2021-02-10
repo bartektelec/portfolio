@@ -37,13 +37,11 @@ const Navigation: React.FC<NavigationProps> = () => {
     >
       <div className='flex justify-between items-center w-full max-w-screen-2xl py-5 mx-auto'>
         <a className='hover:opacity-75 transition-opacity' href='#'>
-          <Image
+          <img
+            className='w-6 h-6'
             src='/assets/logo.png'
             alt='Bartek Telec logo'
-            width='24'
-            height='24'
           />
-          <span className='sr-only'>Bartek Telec logo</span>
         </a>
         <ul
           ref={navList}
