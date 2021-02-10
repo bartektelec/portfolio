@@ -30,8 +30,6 @@ const Layout: React.FC<Props> = () => {
       const headerEls = header.querySelectorAll('a,p,h2');
       const image = header.querySelector('[data-profile]');
 
-      console.log(image);
-
       gsap.fromTo(
         confetti,
         { opacity: 0 },

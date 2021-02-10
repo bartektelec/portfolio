@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
 
 import { debounce } from '../../utils/debounce';
 
