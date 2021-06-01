@@ -1,5 +1,5 @@
 import Container from '../Container/';
-import BlogPost from '../BlogPost/';
+import BlogCard from '../BlogCard/';
 import Icon from '../Icon/';
 
 export interface BlogProps {}
@@ -12,17 +12,17 @@ const Blog: React.FC<BlogProps> = () => {
           <span className='accented'>Latest blog posts</span>
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-          <BlogPost
+          <BlogCard
             title='Running TypeScript on my fridge'
             short='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat, eget sed rhoncus in. Orci eget placerat sagittis ac.'
             url='#'
           />
-          <BlogPost
+          <BlogCard
             title='Running TypeScript on my fridge'
             short='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat, eget sed rhoncus in. Orci eget placerat sagittis ac.'
             url='#'
           />
-          <BlogPost
+          <BlogCard
             title='Running TypeScript on my fridge'
             short='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat, eget sed rhoncus in. Orci eget placerat sagittis ac.'
             url='#'
