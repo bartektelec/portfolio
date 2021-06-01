@@ -39,7 +39,6 @@ export function getPostBySlug(
 		{}
 	);
 
-	console.log(items);
 	return items;
 }
 
