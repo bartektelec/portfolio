@@ -1,64 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;700&display=swap");
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 section {
-  scroll-margin-top: 70px;
+	scroll-margin-top: 70px;
 }
 body {
-  @apply text-gray-100;
-  @apply bg-gray-800;
-  font-family: 'Poppins', sans-serif;
-  font-weight: normal;
-  max-width: 100vw;
-  overflow-x: hidden;
+	@apply text-gray-100;
+	@apply bg-gray-800;
+	font-family: "Poppins", sans-serif;
+	font-weight: normal;
+	max-width: 100vw;
+	overflow-x: hidden;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .hero-paragraph {
-  max-width: 40ch;
+	max-width: 40ch;
 }
 
 .hero-img {
 }
 
 .accented {
-  z-index: 0;
-  position: relative;
+	z-index: 0;
+	position: relative;
 }
 
 .link--active {
-  @apply relative;
-  opacity: 1;
+	@apply relative;
+	opacity: 1;
 }
 
 .link--active::after {
-  @apply absolute -bottom-2 w-1 h-1 bg-yellow-600 block rounded-sm opacity-0;
-  left: 50%;
-  content: '';
-  animation: fadeIn 0.4s ease forwards;
+	@apply absolute -bottom-2 w-1 h-1 bg-yellow-600 block rounded-sm opacity-0;
+	left: 50%;
+	content: "";
+	animation: fadeIn 0.4s ease forwards;
 }
 
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+	to {
+		opacity: 1;
+	}
 }
 
 .accented::after {
-  @apply text-yellow-600;
-  display: block;
-  content: '_';
-  font-family: 'Permanent marker';
-  font-size: 72px;
-  position: absolute;
-  bottom: 0.625rem;
-  right: -0.5rem;
-  transform: rotateZ(-5deg);
-  z-index: -1;
+	@apply text-yellow-600;
+	display: block;
+	content: "_";
+	font-family: "Permanent marker";
+	font-size: 72px;
+	position: absolute;
+	bottom: 0.625rem;
+	right: -0.5rem;
+	transform: rotateZ(-5deg);
+	z-index: -1;
+}
+
+.blogpost {
+	@apply flex flex-col gap-4 text-sm;
+}
+
+.blogpost h2 {
+	@apply text-2xl font-medium font-marker accented w-max mt-12 mb-4;
+}
+
+.blogpost img {
+	@apply mx-auto my-4 rounded-md;
+}
+
+.blogpost p {
+	@apply text-gray-300 leading-6;
+}
+
+.blogpost pre {
+	@apply bg-green-900 py-4 pt-16 rounded-md relative overflow-hidden;
+}
+.blogpost code {
+	@apply text-green-100;
+}
+
+.blogpost pre::before {
+	content: "";
+	@apply absolute top-0 left-0 w-full h-12 bg-gray-900;
+}
+
+.blogpost pre::after {
+	content: "";
+	@apply absolute top-0 right-0 w-4 h-4 rounded-full m-4 bg-yellow-400;
 }

@@ -1,5 +1,21 @@
-import Layout from '../components/Layout';
+import Layout from "../components/Layout";
+import { getAllPosts } from "../utils/posts";
 
-const IndexPage = () => <Layout />;
+interface Props {
+	allPosts: IPost[];
+}
+
+const IndexPage: React.FC<Props> = ({ allPosts }) => (
+	<Layout allPosts={allPosts} />
+);
+
+export async function getStaticProps() {
+	const allPosts = getAllPosts();
+	return {
+		props: {
+			allPosts,
+		},
+	};
+}
 
 export default IndexPage;
