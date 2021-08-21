@@ -19,37 +19,10 @@ body {
 *::before {
 	box-sizing: border-box;
 }
-
-.hero-paragraph {
-	max-width: 40ch;
-}
-
-.hero-img {
-}
-
 .accented {
 	z-index: 0;
 	position: relative;
 }
-
-.link--active {
-	@apply relative;
-	opacity: 1;
-}
-
-.link--active::after {
-	@apply absolute -bottom-2 w-1 h-1 bg-yellow-600 block rounded-sm opacity-0;
-	left: 50%;
-	content: "";
-	animation: fadeIn 0.4s ease forwards;
-}
-
-@keyframes fadeIn {
-	to {
-		opacity: 1;
-	}
-}
-
 .accented::after {
 	@apply text-yellow-600;
 	display: block;
@@ -68,7 +41,8 @@ body {
 }
 
 .blogpost h2 {
-	@apply text-2xl font-medium font-marker accented w-max mt-12 mb-4;
+	@extend accented;
+	@apply text-2xl font-medium font-marker w-max mt-12 mb-4;
 }
 
 .blogpost img {
@@ -94,4 +68,143 @@ body {
 .blogpost pre::after {
 	content: "";
 	@apply absolute top-0 right-0 w-4 h-4 rounded-full m-4 bg-yellow-400;
+}
+.confetti {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	z-index: -1;
+	transition: transform 10s ease;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-name: floatOne;
+	animation-duration: 10s;
+}
+
+.confetti:first-of-type {
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 20px solid #718096;
+	border-top: 20px solid transparent;
+	top: 3rem;
+	left: 10%;
+}
+
+.confetti:nth-of-type(n + 2) {
+	@apply bg-gray-400;
+}
+
+.confetti:nth-of-type(2) {
+	@apply bg-gray-700;
+	width: 25px;
+	height: 25px;
+	top: 20%;
+	left: 50%;
+}
+
+.confetti:nth-of-type(3) {
+	opacity: 0.2;
+	width: 35px;
+	height: 35px;
+	right: 10%;
+	bottom: 10%;
+}
+
+.confetti:nth-of-type(4) {
+	@apply bg-gray-700;
+	opacity: 0.5;
+	bottom: 10%;
+	left: 10%;
+}
+
+.confetti:nth-of-type(5) {
+	filter: blur(4px);
+	opacity: 0.3;
+	width: 46px;
+	height: 46px;
+	left: 40%;
+	bottom: 5%;
+}
+.confetti:nth-of-type(6) {
+	width: 20px;
+	height: 20px;
+	right: 10%;
+	top: 50%;
+}
+.confetti:nth-of-type(8) {
+	@apply border-yellow-500 bg-transparent;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 12px solid orange;
+	border-top: 20px solid transparent;
+	width: 10px;
+	height: 10px;
+	left: 50%;
+	top: 50%;
+}
+.confetti:nth-of-type(7) {
+	@apply bg-yellow-500;
+	width: 10px;
+	height: 10px;
+	left: 20%;
+	top: 10%;
+}
+
+.confetti:nth-of-type(9) {
+	@apply bg-yellow-500;
+	filter: blur(4px);
+	width: 64px;
+	height: 64px;
+	right: 12%;
+	top: 5%;
+}
+.confetti:nth-of-type(2),
+.confetti:nth-of-type(5),
+.confetti:nth-of-type(7) {
+	animation-name: floatTwo;
+	animation-duration: 10s;
+}
+.confetti:nth-of-type(3),
+.confetti:nth-of-type(6),
+.confetti:nth-of-type(9) {
+	animation-name: floatThree;
+	animation-duration: 20s;
+}
+
+.confetti:nth-of-type(2n) {
+	animation-direction: alternate-reverse;
+}
+@keyframes floatOne {
+	from {
+		transform: translate(0, 0) rotateZ(0deg);
+		filter: blur(0px);
+	}
+	to {
+		transform: translate(-100%, 5%) rotateZ(125deg);
+		filter: blur(4px);
+	}
+}
+@keyframes floatTwo {
+	from {
+		transform: translate(-100%, -100%) rotateZ(0deg);
+		filter: blur(6px);
+	}
+	to {
+		transform: translate(100%, 100%) rotateZ(270deg);
+		filter: blur(2px);
+	}
+}
+@keyframes floatThree {
+	from {
+		transform: translate(-150%, -50%) rotateZ(0deg);
+		filter: blur(4px);
+	}
+	to {
+		transform: translate(0, 100%) rotateZ(270deg);
+		filter: blur(1px);
+	}
+}
+
+.slow-fade {
+	transition: opacity 0.3s 0.3s ease-in-out, transform 0.6s ease-out;
 }

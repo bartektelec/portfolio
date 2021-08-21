@@ -2,8 +2,6 @@ import { useState, useRef, useEffect } from "react";
 
 import { debounce } from "../../utils/debounce";
 
-import styles from "./navigation.module.css";
-
 export interface NavigationProps {}
 
 const Navigation: React.FC<NavigationProps> = () => {
@@ -31,7 +29,7 @@ const Navigation: React.FC<NavigationProps> = () => {
 	return (
 		<nav
 			data-testid="nav"
-			className={styles.navigation}
+			className="px-4 fixed w-full bg-gray-800 bg-opacity-90 z-50 transition-all"
 			style={{ top: visible ? "0" : "-72px" }}
 		>
 			<div className="flex justify-between items-center w-full max-w-screen-2xl py-5 mx-auto">

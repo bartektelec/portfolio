@@ -1,4 +1,5 @@
 module.exports = {
+	mode: "jit",
 	purge: [
 		"./pages/*.tsx",
 		"./pages/**/*.tsx",
@@ -23,7 +24,9 @@ module.exports = {
 		},
 	},
 	variants: {
-		extend: {},
+		extend: {
+			brightness: ["hover"],
+		},
 	},
 	plugins: [],
 };

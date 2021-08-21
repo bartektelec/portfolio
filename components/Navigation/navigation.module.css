@@ -1,5 +1,0 @@
-.navigation {
-  @apply px-4 fixed w-full bg-gray-800 bg-opacity-90;
-  z-index: 1000;
-  transition: top 0.5s ease;
-}

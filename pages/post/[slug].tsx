@@ -5,7 +5,6 @@ import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import remark from "remark";
 import html from "remark-html";
-import styles from "../../components/Hero/hero.module.css";
 import Socialbar from "../../components/Socialbar";
 
 export interface BlogPageProps {
@@ -21,13 +20,9 @@ const BlogPage: React.FC<BlogPageProps> = ({ post }) => {
 			<div className="min-h-screen flex flex-col">
 				<Navigation />
 				<Socialbar />
-				<main className="container max-w-prose mx-auto mt-20 flex-1">
+				<main className="container px-4 box-border max-w-prose mx-auto mt-20 flex-1">
 					{[...Array(9)].map((_, index) => (
-						<div
-							data-confetti
-							key={`confetti-${index}`}
-							className={styles.confetti}
-						/>
+						<div data-confetti key={`confetti-${index}`} className="confetti" />
 					))}
 					<div className="flex flex-col rounded-md gap-4">
 						<div
