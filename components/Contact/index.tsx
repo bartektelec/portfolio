@@ -1,9 +1,7 @@
 import Container from "../Container";
 import Icon from "../Icon";
 
-export interface ContactProps {}
-
-const Contact: React.FC<ContactProps> = () => {
+const Contact = () => {
 	return (
 		<section id="contact">
 			<Container>

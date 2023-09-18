@@ -7,7 +7,7 @@ export interface BlogProps {
 	allPosts: Pick<IPost, "excerpt" | "title" | "slug">[];
 }
 
-const Blog: React.FC<BlogProps> = ({ allPosts }) => {
+const Blog = ({ allPosts }: BlogProps) => {
 	const [expanded, setExpanded] = useState<boolean>(false);
 	return (
 		<section id="posts" className="mb-16">

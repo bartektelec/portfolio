@@ -3,7 +3,7 @@ import SkillCard from "../SkillCard/";
 
 export interface AboutProps {}
 
-const About: React.FC<AboutProps> = () => {
+const About = () => {
 	return (
 		<section id="about" className="mb-16">
 			<Container>

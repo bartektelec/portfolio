@@ -5,9 +5,10 @@ import cn from "classnames";
 export interface CarouselProps {
 	onPrev: () => void;
 	onNext: () => void;
+	children: React.ReactNode[];
 }
 
-const Wrapper: React.FC<CarouselProps> = ({ children, onPrev, onNext }) => {
+const Wrapper = ({ children, onPrev, onNext }: CarouselProps) => {
 	return (
 		<div className="grid grid-cols-6 sm:grid-cols-12 justify-items-center">
 			<button onClick={onPrev} className="focus:outline-none hidden sm:block">
@@ -68,7 +69,7 @@ const Item: React.FC<ItemProps> = ({
 				"slow-fade grid grid-cols-8 col-start-1 row-start-1 relative transform",
 				{
 					"sm:opacity-0 sm:scale-90 sm:pointer-events-none": !showing,
-				}
+				},
 			)}
 		>
 			<a
