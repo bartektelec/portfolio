@@ -22,7 +22,7 @@ export function getPostBySlug(
 		"title",
 		"slug",
 		"content",
-	]
+	],
 ): Partial<IPost> {
 	const realSlug = slug.replace(/\.md$/, "");
 
@@ -36,7 +36,7 @@ export function getPostBySlug(
 	// Ensure only the minimal needed data is exposed
 	const items = fields.reduce(
 		(acc, curr) => ({ ...acc, [curr]: serializedData[curr] }),
-		{}
+		{},
 	);
 
 	return items;
@@ -52,7 +52,7 @@ export function getAllPosts(
 		"title",
 		"slug",
 		"content",
-	]
+	],
 ) {
 	const slugs = getPostSlugs();
 	const assetsDir = join(process.cwd(), "_posts", "assets");
@@ -69,7 +69,7 @@ export function getAllPosts(
 				? new Date(post1.date) > new Date(post2.date)
 					? -1
 					: 1
-				: 0
+				: 0,
 		);
 	return posts;
 }
